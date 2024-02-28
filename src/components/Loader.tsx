@@ -1,11 +1,13 @@
 import React, { PropsWithChildren } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 import { CONSTANTS } from "../constants";
+
+const logo = require('../assets/images/logo.png')
 
 export function Loader(): React.JSX.Element {
     return (
         <View style={styles.wrapper}>
-            <Text style={styles.loaderText}>Loading....</Text>
+            <Image source={logo}/>
         </View>
     )
 }
@@ -17,10 +19,11 @@ const styles = StyleSheet.create({
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: CONSTANTS.COLORS.BG_WHITE
 
     },
     loaderText: {
         fontSize: CONSTANTS.SIZES.TEXT_MD,
-        color: CONSTANTS.COLORS.TEXT_PRIMARY,
+        color: CONSTANTS.COLORS.TEXT_DEFAULT,
     }
 })

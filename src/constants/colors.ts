@@ -1,3 +1,5 @@
 export const COLORS = {
-    TEXT_PRIMARY: 'black'
+    TEXT_DEFAULT: 'black',
+    BG_WHITE: 'white',
+    BG_SECONDARY: ''
 }

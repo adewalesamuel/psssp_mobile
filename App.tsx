@@ -5,10 +5,9 @@
  * @format
  */
 
-import React, { EventHandler, useEffect, useRef } from 'react';
-import { Platform, StyleSheet, SafeAreaView, BackHandler, NativeEventSubscription, Text } from "react-native";
+import React, { useEffect, useRef } from 'react';
+import { Platform, StyleSheet, SafeAreaView, BackHandler } from "react-native";
 import WebView from 'react-native-webview';
-import { CONSTANTS } from './src/constants';
 import { Components } from './src/components';
 
 function App(): React.JSX.Element {
@@ -16,15 +15,12 @@ function App(): React.JSX.Element {
 
     const webViewRef = useRef<WebView|null>(null);
     
-    
     useEffect(() => {
         if (Platform.OS === 'ios') return;
 
         const handleBackPress = () => {
             if (!webViewRef.current) return false;
-            
             webViewRef.current.goBack();
-    
             return true;
         };
 
@@ -41,6 +37,7 @@ function App(): React.JSX.Element {
             <WebView source={{uri: appUrl}} ref={webViewRef}
             javaScriptEnabled={true} domStorageEnabled={true}
             allowsBackForwardNavigationGestures={true}
+            startInLoadingState={true}
             pullToRefreshEnabled={true}
             mixedContentMode="compatibility"
             renderLoading={() => <Components.Loader />}/>
