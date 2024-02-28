@@ -5,15 +5,45 @@
  * @format
  */
 
-import React from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
+import React, { EventHandler, useEffect, useRef } from 'react';
+import { Platform, StyleSheet, SafeAreaView, BackHandler, NativeEventSubscription, Text } from "react-native";
 import WebView from 'react-native-webview';
+import { CONSTANTS } from './src/constants';
+import { Components } from './src/components';
 
 function App(): React.JSX.Element {
     const appUrl = 'http://192.168.1.24:5173/'
+
+    const webViewRef = useRef<WebView|null>(null);
+    
+    
+    useEffect(() => {
+        if (Platform.OS === 'ios') return;
+
+        const handleBackPress = () => {
+            if (!webViewRef.current) return false;
+            
+            webViewRef.current.goBack();
+    
+            return true;
+        };
+
+        const handleEvent = BackHandler.addEventListener(
+            'hardwareBackPress',
+            handleBackPress
+        );
+
+        return () => handleEvent.remove();
+    }, [])
+
     return (
         <SafeAreaView style={styles.wrapper}>
-            <WebView source={{uri: appUrl}} />
+            <WebView source={{uri: appUrl}} ref={webViewRef}
+            javaScriptEnabled={true} domStorageEnabled={true}
+            allowsBackForwardNavigationGestures={true}
+            pullToRefreshEnabled={true}
+            mixedContentMode="compatibility"
+            renderLoading={() => <Components.Loader />}/>
         </SafeAreaView>
     );
 }
