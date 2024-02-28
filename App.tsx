@@ -5,21 +5,24 @@
  * @format
  */
 
-import React, { useEffect, useRef } from 'react';
-import { Platform, StyleSheet, SafeAreaView, BackHandler } from "react-native";
-import WebView from 'react-native-webview';
+import React, { useEffect, useRef, useState } from 'react';
+import { Platform, StyleSheet, SafeAreaView, BackHandler, Alert } from "react-native";
+import WebView, { WebViewNavigation } from 'react-native-webview';
 import { Components } from './src/components';
 
 function App(): React.JSX.Element {
     const appUrl = 'http://192.168.1.24:5173/'
 
     const webViewRef = useRef<WebView|null>(null);
-    
+
+    const [errorDescription, setErrorDescription] = useState<string|null>(null);
+
     useEffect(() => {
         if (Platform.OS === 'ios') return;
 
         const handleBackPress = () => {
             if (!webViewRef.current) return false;
+
             webViewRef.current.goBack();
             return true;
         };
@@ -35,12 +38,16 @@ function App(): React.JSX.Element {
     return (
         <SafeAreaView style={styles.wrapper}>
             <WebView source={{uri: appUrl}} ref={webViewRef}
-            javaScriptEnabled={true} domStorageEnabled={true}
+            javaScriptEnabled={true} 
+            domStorageEnabled={true}
             allowsBackForwardNavigationGestures={true}
             startInLoadingState={true}
             showsVerticalScrollIndicator={false}
             mixedContentMode="compatibility"
-            renderLoading={() => <Components.Loader />}/>
+            onError={({nativeEvent}) => setErrorDescription(nativeEvent.description)}
+            renderLoading={() => <Components.Loader />}
+            renderError={(error) => <Components.ErrorMessage description={errorDescription} />}
+            />
         </SafeAreaView>
     );
 }
