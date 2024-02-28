@@ -1,10 +1,11 @@
-import React, { PropsWithChildren } from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { Image, StyleSheet, View } from "react-native";
 import { CONSTANTS } from "../constants";
 
-const logo = require('../assets/images/logo.png')
 
 export function Loader(): React.JSX.Element {
+    const logo = require('../assets/images/logo.png');
+
     return (
         <View style={styles.wrapper}>
             <Image source={logo}/>

@@ -38,7 +38,7 @@ function App(): React.JSX.Element {
             javaScriptEnabled={true} domStorageEnabled={true}
             allowsBackForwardNavigationGestures={true}
             startInLoadingState={true}
-            pullToRefreshEnabled={true}
+            showsVerticalScrollIndicator={false}
             mixedContentMode="compatibility"
             renderLoading={() => <Components.Loader />}/>
         </SafeAreaView>
