@@ -11,7 +11,7 @@ import WebView, { WebViewNavigation } from 'react-native-webview';
 import { Components } from './src/components';
 
 function App(): React.JSX.Element {
-    const appUrl = 'http://192.168.1.24:5173/'
+    const appUrl = 'https://office-psssp.digital-projects.space/connexion'
 
     const webViewRef = useRef<WebView|null>(null);
 
