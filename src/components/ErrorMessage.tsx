@@ -10,10 +10,14 @@ export function ErrorMessage(props: ErrorMessageProp): React.JSX.Element {
         <View style={styles.wrapper}>
             <Text style={styles.errorTitle}>Une erreur est survenue</Text>
             {props.description && props.description === 'net::ERR_CONNECTION_REFUSED' ? 
-            <Text style={styles.errorMessage}>
-                Veuillez verifier votre connexion itnernet
-            </Text>
-            : null}
+                <Text style={styles.errorMessage}>
+                    Veuillez verifier votre connexion itnernet
+                </Text>
+            : 
+                <Text style={styles.errorMessage}>
+                    {props.description ?? ""}
+                </Text>
+            }
             <View style={styles.buttonWrapper}>
                 <Button title="FERMER" onPress={() => BackHandler.exitApp()} />
             </View>
