@@ -6,8 +6,8 @@
  */
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Platform, StyleSheet, SafeAreaView, BackHandler, Alert } from "react-native";
-import WebView, { WebViewNavigation } from 'react-native-webview';
+import { Platform, StyleSheet, SafeAreaView, BackHandler } from "react-native";
+import WebView from 'react-native-webview';
 import { Components } from './src/components';
 
 function App(): React.JSX.Element {
@@ -46,7 +46,7 @@ function App(): React.JSX.Element {
             mixedContentMode="compatibility"
             onError={({nativeEvent}) => setErrorDescription(nativeEvent.description)}
             renderLoading={() => <Components.Loader />}
-            renderError={(error) => <Components.ErrorMessage description={errorDescription} />}
+            renderError={() => <Components.ErrorMessage description={errorDescription} />}
             />
         </SafeAreaView>
     );

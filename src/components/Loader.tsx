@@ -4,11 +4,11 @@ import { CONSTANTS } from "../constants";
 
 
 export function Loader(): React.JSX.Element {
-    const logo = require('../assets/images/logo.png');
+    const logoNoBg = require('../assets/images/logo-nobg.png');
 
     return (
         <View style={styles.wrapper}>
-            <Image source={logo}/>
+            <Image source={logoNoBg}/>
         </View>
     )
 }
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: CONSTANTS.COLORS.BG_WHITE
+        backgroundColor: CONSTANTS.COLORS.BG_PRIMARY
 
     },
     loaderText: {
