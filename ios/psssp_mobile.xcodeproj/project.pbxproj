@@ -478,12 +478,15 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 95YZQV4SDQ;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "${inherited}";
 				INFOPLIST_FILE = psssp_mobile/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Psssp;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(SDKROOT)/usr/lib/swift${inherited}";
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "${inherited}";
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -509,13 +512,15 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 95YZQV4SDQ;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = "${inherited}";
 				INFOPLIST_FILE = psssp_mobile/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Psssp;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(SDKROOT)/usr/lib/swift${inherited}";
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
