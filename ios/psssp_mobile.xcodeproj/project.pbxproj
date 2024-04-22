@@ -12,7 +12,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		651E63F82BCB193A00ED78A9 /* logo-nobg.png in Resources */ = {isa = PBXBuildFile; fileRef = 651E63F72BCB193A00ED78A9 /* logo-nobg.png */; };
+		65F5CA5D2BD6D4730025B3CB /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F5CA5C2BD6D4730025B3CB /* logo.png */; };
 		7699B88040F8A987B510C191 /* libPods-psssp_mobile-psssp_mobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-psssp_mobile-psssp_mobileTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -42,7 +42,7 @@
 		5709B34CF0A7D63546082F79 /* Pods-psssp_mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-psssp_mobile.release.xcconfig"; path = "Target Support Files/Pods-psssp_mobile/Pods-psssp_mobile.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-psssp_mobile-psssp_mobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-psssp_mobile-psssp_mobileTests.debug.xcconfig"; path = "Target Support Files/Pods-psssp_mobile-psssp_mobileTests/Pods-psssp_mobile-psssp_mobileTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-psssp_mobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-psssp_mobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		651E63F72BCB193A00ED78A9 /* logo-nobg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-nobg.png"; path = "../src/assets/images/logo-nobg.png"; sourceTree = "<group>"; };
+		65F5CA5C2BD6D4730025B3CB /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../Downloads/logo.png; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = psssp_mobile/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-psssp_mobile-psssp_mobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-psssp_mobile-psssp_mobileTests.release.xcconfig"; path = "Target Support Files/Pods-psssp_mobile-psssp_mobileTests/Pods-psssp_mobile-psssp_mobileTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -93,7 +93,7 @@
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
-				651E63F72BCB193A00ED78A9 /* logo-nobg.png */,
+				65F5CA5C2BD6D4730025B3CB /* logo.png */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = psssp_mobile;
@@ -246,7 +246,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				651E63F82BCB193A00ED78A9 /* logo-nobg.png in Resources */,
+				65F5CA5D2BD6D4730025B3CB /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
