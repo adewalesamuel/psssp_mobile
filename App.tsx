@@ -11,7 +11,7 @@ import WebView from 'react-native-webview';
 import { Components } from './src/components';
 
 function App(): React.JSX.Element {
-    const appUrl = 'https://psssp-v2.digital-projects.space/mobile-home'
+    const appUrl = 'https://psssp.org/mobile-home'
 
     const webViewRef = useRef<WebView|null>(null);
 
